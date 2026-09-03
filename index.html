@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moonlit Hub — public project status, roadmap, and approved downloads for the Moonlit software ecosystem.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Moonlit Hub</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Moonlit Hub home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>Moonlit</strong><small>Hub</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#products">Products</a>
+      <a href="#direction">Direction</a>
+      <a href="#new">What's New</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Public project site</p>
+        <h1>Trading software built as a focused, federated suite.</h1>
+        <p class="hero-lede">Moonlit is a family of independent tools for trading operations, market structure research, and deliberate practice. This Hub is the public view: current products, approved builds, recent changes, and project direction.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#products">Explore products</a>
+          <a class="button secondary" href="#downloads">View downloads</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Current project focus">
+        <p class="panel-kicker">Current focus</p>
+        <h2>Ledger + Indicators</h2>
+        <p>Active development is centered on Moonlit Ledger and the Moonlit Indicators family.</p>
+        <div class="focus-row"><span>Ledger</span><strong>Active Development</strong></div>
+        <div class="focus-row"><span>Indicators</span><strong>Active / Reorganization</strong></div>
+        <div class="focus-row muted"><span>Replay</span><strong>Paused</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="products" aria-labelledby="products-title">
+      <div class="section-heading">
+        <p class="eyebrow">Products</p>
+        <h2 id="products-title">The Moonlit ecosystem</h2>
+        <p>Product status reflects the current public-safe project state. Planned work is not presented as shipped functionality.</p>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="section split" id="direction" aria-labelledby="direction-title">
+      <div class="section-heading sticky-heading">
+        <p class="eyebrow">Current Direction</p>
+        <h2 id="direction-title">What is being worked on now</h2>
+      </div>
+      <div class="content-stack">
+        <article class="content-card">
+          <h3>Moonlit Ledger</h3>
+          <p>Continue consolidating trading-account operations around account management, risk/guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview.</p>
+          <p>Multi-account telemetry may use NinjaTrader / Tradovate integrations where supported. Availability depends on the active implementation and platform capabilities.</p>
+        </article>
+        <article class="content-card">
+          <h3>Moonlit Indicators</h3>
+          <p>Reorganize the product family around VWAP Map 1s, VWAP Map 1m, Automated Levels, Manual Levels, and product-facing research. Broader experimental work may later live in a separate Indicator Lab.</p>
+        </article>
+        <article class="content-card subdued">
+          <h3>Moonlit Replay</h3>
+          <p>Replay remains intentionally independent from live account state and is currently backburnered while active work concentrates elsewhere.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="new" aria-labelledby="new-title">
+      <div class="section-heading">
+        <p class="eyebrow">What's New</p>
+        <h2 id="new-title">Recent public-facing changes</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <time datetime="2026-09-02">September 2, 2026</time>
+          <h3>Moonlit Hub established</h3>
+          <p>Created a dedicated public presentation and download surface for the Moonlit software ecosystem, separate from private product repositories and internal Atlas documentation.</p>
+        </article>
+        <article>
+          <time datetime="2026-09-02">September 2, 2026</time>
+          <h3>Public product boundaries clarified</h3>
+          <p>Ledger and Indicators are active development priorities; Replay is paused; Atlas remains the internal organizational and documentation map rather than a downloadable application.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-heading">
+        <p class="eyebrow">Roadmap</p>
+        <h2 id="roadmap-title">Public-safe project direction</h2>
+        <p>Roadmap labels describe intent, not delivery promises.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article class="roadmap-card current"><span>Current</span><h3>Ledger + Indicators</h3><p>Primary development focus across trading operations and indicator products.</p></article>
+        <article class="roadmap-card development"><span>In Development</span><h3>Ledger consolidation</h3><p>Continue evolving the current trading account, risk, journal, session, and operations application.</p></article>
+        <article class="roadmap-card planned"><span>Planned</span><h3>Indicator organization</h3><p>Clarify product-facing indicators and research, with experimental work separable from stable products.</p></article>
+        <article class="roadmap-card paused"><span>Paused</span><h3>Moonlit Replay</h3><p>Historical replay, Blind Read, synthetic markets, and deliberate-practice workflows remain backburnered.</p></article>
+        <article class="roadmap-card concept"><span>Concept</span><h3>Indicator Lab</h3><p>A broader home for experimental indicator research may be introduced later if useful.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="downloads" aria-labelledby="downloads-title">
+      <div class="section-heading">
+        <p class="eyebrow">Downloads</p>
+        <h2 id="downloads-title">Approved public builds</h2>
+        <p>Only owner-approved working builds appear here. Development checkpoints, private repository history, and recovered archives are not public downloads.</p>
+      </div>
+      <div class="download-list" id="download-list"></div>
+      <p class="download-note">Future binaries should be attached to GitHub Releases instead of committed into this site repository.</p>
+    </section>
+
+    <section class="section" id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-heading">
+        <p class="eyebrow">Screenshots</p>
+        <h2 id="screenshots-title">Product previews</h2>
+      </div>
+      <div class="empty-state">
+        <div class="empty-icon" aria-hidden="true"></div>
+        <h3>No public screenshots yet</h3>
+        <p>Approved product screenshots or clearly labeled mockups can be added here later. Nothing is shown until it represents actual or explicitly conceptual functionality.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Moonlit Hub</strong><p>Public project information for the Moonlit software ecosystem.</p></div>
+    <p>Private product source and internal Atlas documentation are not published here.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
