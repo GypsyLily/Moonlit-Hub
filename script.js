@@ -1,11 +1,11 @@
 const products = [
   {
     name: "Moonlit Ledger",
-    status: "Active Development",
+    status: "Invite-only Multi-User Beta",
     statusClass: "active",
-    purpose: "Trading account, risk, journal, session, and trading-operations software, formerly developed under the name Guardrail.",
-    features: ["Prop-account management", "Risk / guardrail tools", "Rules", "Journal + live notes", "Sessions + reviews", "Account overview", "Supported multi-account telemetry"],
-    availability: "In development",
+    purpose: "Trading account, risk, journal, session, and trading-operations software, formerly developed under the name Guardrail. The current public state is a live invite-only multi-user beta.",
+    features: ["Prop-account management", "Risk / guardrail tools", "Rules", "Journal + live notes", "Sessions + reviews", "Account overview", "Multi-user tenancy", "Supported telemetry where available"],
+    availability: "Invite-only multi-user beta",
     version: null,
     downloadUrl: null
   },
@@ -13,29 +13,29 @@ const products = [
     name: "Moonlit Indicators",
     status: "Active Development / Reorganization",
     statusClass: "active",
-    purpose: "A product family for market-structure and level-based trading tools, with stable product-facing research kept distinct from broader experimentation.",
-    features: ["VWAP Map 1s", "VWAP Map 1m", "Automated Levels", "Manual Levels", "Product-facing research"],
-    availability: "In development",
+    purpose: "A market-structure and level-based indicator family being reorganized around distinct components with explicit jobs, while keeping stable product-facing work separate from broader experimentation.",
+    features: ["Currents", "Trace", "Ebb", "Levels", "VWAP Map", "Constellation interface concept", "Geometry planned"],
+    availability: "In active development",
     version: null,
     downloadUrl: null
   },
   {
     name: "Moonlit Replay",
-    status: "Paused / Backburnered",
+    status: "Paused / Preserved",
     statusClass: "paused",
-    purpose: "An independent research and training product for historical replay, Blind Read, synthetic chart / market generation, and deliberate-practice workflows.",
-    features: ["Historical replay", "Blind Read", "Synthetic markets", "Deliberate practice"],
-    availability: "Development paused",
+    purpose: "An independent research and training product for historical replay, Blind Read, synthetic chart / market generation, and deliberate-practice workflows. Its preserved baseline remains intact while expansion is deferred.",
+    features: ["Historical replay", "Blind Read", "Synthetic markets", "Deliberate practice", "Preserved baseline"],
+    availability: "Preserved; development paused",
     version: null,
     downloadUrl: null
   },
   {
     name: "Moonlit Atlas",
-    status: "Internal Documentation",
+    status: "Internal / Specification Reconciliation",
     statusClass: "internal",
-    purpose: "The internal organizational and documentation map for a deliberately federated Moonlit ecosystem. Atlas is not a downloadable trading application.",
-    features: ["Internal organization", "Federated product map", "Private documentation"],
-    availability: "Not publicly distributed",
+    purpose: "The internal project-memory and lineage system for the Moonlit ecosystem, tracking how products, decisions, branches, and changes relate over time. Implementation waits on reconciliation of the current vocabulary and architecture.",
+    features: ["Project memory", "History + rationale", "Branch lineage", "What led here?", "Internal documentation"],
+    availability: "Internal; implementation not started",
     version: null,
     downloadUrl: null
   }
