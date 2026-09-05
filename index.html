@@ -37,10 +37,10 @@
       <div class="hero-panel" aria-label="Current project focus">
         <p class="panel-kicker">Current focus</p>
         <h2>Ledger + Indicators</h2>
-        <p>Active development is centered on Moonlit Ledger and the Moonlit Indicators family.</p>
-        <div class="focus-row"><span>Ledger</span><strong>Active Development</strong></div>
-        <div class="focus-row"><span>Indicators</span><strong>Active / Reorganization</strong></div>
-        <div class="focus-row muted"><span>Replay</span><strong>Paused</strong></div>
+        <p>Active development is centered on the live Ledger beta and the reorganized Moonlit Indicators family.</p>
+        <div class="focus-row"><span>Ledger</span><strong>Invite-only Multi-User Beta</strong></div>
+        <div class="focus-row"><span>Indicators</span><strong>Active Development</strong></div>
+        <div class="focus-row muted"><span>Replay</span><strong>Paused / Preserved</strong></div>
       </div>
     </section>
 
@@ -61,16 +61,26 @@
       <div class="content-stack">
         <article class="content-card">
           <h3>Moonlit Ledger</h3>
-          <p>Continue consolidating trading-account operations around account management, risk/guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview.</p>
-          <p>Multi-account telemetry may use NinjaTrader / Tradovate integrations where supported. Availability depends on the active implementation and platform capabilities.</p>
+          <p>Ledger is now in a live invite-only multi-user beta. Current work is focused on hardening the beta: import and migration verification, stale-state protection, onboarding clarity, tester defects, and regression coverage.</p>
+          <p>Core scope remains trading-account operations, risk / guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview. Brokerage telemetry remains a separate integration path where supported.</p>
         </article>
         <article class="content-card">
           <h3>Moonlit Indicators</h3>
-          <p>Reorganize the product family around VWAP Map 1s, VWAP Map 1m, Automated Levels, Manual Levels, and product-facing research. Broader experimental work may later live in a separate Indicator Lab.</p>
+          <p>The indicator family is being reorganized around distinct components with explicit jobs: Currents, Trace, Ebb, and Levels, with VWAP Map retained in the broader product family.</p>
+          <p>Constellation is an umbrella/interface concept rather than another equivalent indicator, while Geometry remains planned. Broader experimental work remains separable from stable product-facing components.</p>
         </article>
         <article class="content-card subdued">
           <h3>Moonlit Replay</h3>
-          <p>Replay remains intentionally independent from live account state and is currently backburnered while active work concentrates elsewhere.</p>
+          <p>Replay remains intentionally independent from live account state. Its preserved baseline remains intact while further expansion is paused.</p>
+        </article>
+        <article class="content-card subdued">
+          <h3>Moonlit Atlas</h3>
+          <p>Atlas is currently in specification reconciliation. Its role is internal project memory and lineage: preserving products, decisions, branches, rationale, and “What led here?” relationships without rewriting history to look cleaner than it was.</p>
+          <p>Implementation begins only after the reconciled vocabulary and architecture are accepted.</p>
+        </article>
+        <article class="content-card">
+          <h3>Moonlit Hub</h3>
+          <p>The public site is live and now serves as the curated presentation and future download surface for approved Moonlit releases. Ongoing maintenance is limited to public-safe product state, changelog, roadmap, screenshots, and approved release links.</p>
         </article>
       </div>
     </section>
@@ -82,14 +92,24 @@
       </div>
       <div class="timeline">
         <article>
-          <time datetime="2026-09-02">September 2, 2026</time>
-          <h3>Moonlit Hub established</h3>
-          <p>Created a dedicated public presentation and download surface for the Moonlit software ecosystem, separate from private product repositories and internal Atlas documentation.</p>
+          <time datetime="2026-09-05">September 5, 2026</time>
+          <h3>Ledger entered invite-only multi-user beta</h3>
+          <p>Moonlit Ledger crossed from general active development into a live invite-only multi-user beta. Current work is focused on beta hardening, migration and state-safety checks, onboarding clarity, and regression coverage.</p>
+        </article>
+        <article>
+          <time datetime="2026-09-05">September 5, 2026</time>
+          <h3>Indicator architecture clarified</h3>
+          <p>Moonlit Indicators is now organized around distinct components including Currents, Trace, Ebb, and Levels, with Constellation treated as an umbrella/interface concept and Geometry kept as planned work.</p>
+        </article>
+        <article>
+          <time datetime="2026-09-05">September 5, 2026</time>
+          <h3>Atlas moved into reconciliation before implementation</h3>
+          <p>Atlas remains internal, but its role is now defined more precisely as project memory and lineage. Implementation is intentionally blocked until the current terminology and architecture are reconciled.</p>
         </article>
         <article>
           <time datetime="2026-09-02">September 2, 2026</time>
-          <h3>Public product boundaries clarified</h3>
-          <p>Ledger and Indicators are active development priorities; Replay is paused; Atlas remains the internal organizational and documentation map rather than a downloadable application.</p>
+          <h3>Moonlit Hub established</h3>
+          <p>Created a dedicated public presentation and download surface for the Moonlit software ecosystem, separate from private product repositories and internal Atlas documentation.</p>
         </article>
       </div>
     </section>
@@ -101,11 +121,11 @@
         <p>Roadmap labels describe intent, not delivery promises.</p>
       </div>
       <div class="roadmap-grid">
-        <article class="roadmap-card current"><span>Current</span><h3>Ledger + Indicators</h3><p>Primary development focus across trading operations and indicator products.</p></article>
-        <article class="roadmap-card development"><span>In Development</span><h3>Ledger consolidation</h3><p>Continue evolving the current trading account, risk, journal, session, and operations application.</p></article>
-        <article class="roadmap-card planned"><span>Planned</span><h3>Indicator organization</h3><p>Clarify product-facing indicators and research, with experimental work separable from stable products.</p></article>
-        <article class="roadmap-card paused"><span>Paused</span><h3>Moonlit Replay</h3><p>Historical replay, Blind Read, synthetic markets, and deliberate-practice workflows remain backburnered.</p></article>
-        <article class="roadmap-card concept"><span>Concept</span><h3>Indicator Lab</h3><p>A broader home for experimental indicator research may be introduced later if useful.</p></article>
+        <article class="roadmap-card current"><span>Current</span><h3>Ledger beta hardening</h3><p>Stabilize the invite-only multi-user beta with migration checks, stale-state protection, onboarding improvements, tester fixes, and regression coverage.</p></article>
+        <article class="roadmap-card development"><span>In Development</span><h3>Indicator components</h3><p>Continue active work across Currents, Trace, Ebb, Levels, and related product-facing research while preserving clear component boundaries.</p></article>
+        <article class="roadmap-card planned"><span>Planned</span><h3>Geometry</h3><p>Geometry remains a future indicator direction and is not presented as shipped functionality.</p></article>
+        <article class="roadmap-card paused"><span>Paused / Preserved</span><h3>Moonlit Replay</h3><p>Historical replay, Blind Read, synthetic markets, and deliberate-practice workflows remain preserved but intentionally paused.</p></article>
+        <article class="roadmap-card concept"><span>Internal</span><h3>Moonlit Atlas</h3><p>Reconcile terminology, architecture, and lineage semantics before implementation begins.</p></article>
       </div>
     </section>
 
