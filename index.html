@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0b1020">
   <title>Moonlit Hub</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./catalog.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,9 +38,10 @@
       <div class="hero-panel" aria-label="Current project focus">
         <p class="panel-kicker">Current focus</p>
         <h2>Ledger + Indicators</h2>
-        <p>Active development is centered on the live Ledger beta and the reorganized Moonlit Indicators family.</p>
-        <div class="focus-row"><span>Ledger</span><strong>Invite-only Multi-User Beta</strong></div>
-        <div class="focus-row"><span>Indicators</span><strong>Active Development</strong></div>
+        <p>Beta hardening, indicator source reconciliation, and controlled research evaluation. The standalone stream-reference tool is also undergoing data and feed validation.</p>
+        <div class="focus-row"><span>Ledger</span><strong>Invite-only web beta</strong></div>
+        <div class="focus-row"><span>Indicators</span><strong>Development / reconciliation</strong></div>
+        <div class="focus-row"><span>Stream Reference</span><strong>Prototype / validation</strong></div>
         <div class="focus-row muted"><span>Replay</span><strong>Paused / Preserved</strong></div>
       </div>
     </section>
@@ -48,9 +50,12 @@
       <div class="section-heading">
         <p class="eyebrow">Products</p>
         <h2 id="products-title">The Moonlit ecosystem</h2>
-        <p>Product status reflects the current public-safe project state. Planned work is not presented as shipped functionality.</p>
+        <p>Development status, access, and public downloads are separate. A working prototype or invite-only beta is not automatically a public release.</p>
+        <p class="review-date">Catalog reviewed <time datetime="2026-09-06">September 6, 2026</time>.</p>
       </div>
       <div class="product-grid" id="product-grid"></div>
+      <noscript><p class="catalog-note">Product cards require JavaScript. Current direction and the roadmap remain available below; no download is offered in this view.</p></noscript>
+      <p class="catalog-note">Component descriptions include ongoing research, not a claim that every feature is finished or validated. Future and parked concepts are listed separately in the roadmap.</p>
     </section>
 
     <section class="section split" id="direction" aria-labelledby="direction-title">
@@ -60,14 +65,26 @@
       </div>
       <div class="content-stack">
         <article class="content-card">
-          <h3>Moonlit Ledger</h3>
-          <p>Ledger is now in a live invite-only multi-user beta. Current work is focused on hardening the beta: import and migration verification, stale-state protection, onboarding clarity, tester defects, and regression coverage.</p>
-          <p>Core scope remains trading-account operations, risk / guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview. Brokerage telemetry remains a separate integration path where supported.</p>
+          <h3>Moonlit Ledger — beta hardening</h3>
+          <p>Ledger remains an invite-only multi-user web beta. Current work focuses on reliable account and session state, safe imports, clearer onboarding, and verification of the beta release path before wider access.</p>
+          <p>Core scope remains account management, risk / guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview. Brokerage telemetry and execution capture are separate future integration work, not features claimed for this beta.</p>
         </article>
         <article class="content-card">
-          <h3>Moonlit Indicators</h3>
-          <p>The indicator family is being reorganized around distinct components with explicit jobs: Currents, Trace, Ebb, and Levels, with VWAP Map retained in the broader product family.</p>
-          <p>Constellation is an umbrella/interface concept rather than another equivalent indicator, while Geometry remains planned. Broader experimental work remains separable from stable product-facing components.</p>
+          <h3>Moonlit Indicators — source reconciliation</h3>
+          <p>Indicator sources, historical research, and the development workflow have been organized. Current reconciliation focuses on Currents, Flow, Traces, and experimental Ebb, while Focus is evaluated as a static session-reminder panel and Levels remains a supporting component.</p>
+          <p>The next step is matching the exact TradingView implementations in use to their corresponding source records. A source used on a chart, a preserved file, a validated behavior, and a publicly approved build are different states.</p>
+          <p>Constellation remains an umbrella/interface concept, Geometry a future direction, and Echoes a parked concept. None is presented as a released component.</p>
+        </article>
+        <article class="content-card">
+          <h3>Traces — controlled behavior evaluation</h3>
+          <p>Current research compares indicator output with manually identified chart relationships. The focus is reducing duplicate representations while preserving distinct levels, their origins, and consistent behavior over time.</p>
+          <p>A source audit and local-consolidation design inform controlled ES comparisons. This is evaluation work, not an announcement that consolidation is fixed, validated, or accepted as a stable build.</p>
+        </article>
+        <article class="content-card">
+          <h3>Prop Firm Stream Reference — data and feed validation</h3>
+          <p>The working Windows prototype follows a simple lookup path: choose a firm, then Accounts or Firm Rules. Account lookup distinguishes programs, sizes, and variants; promotions remain separate from baseline rules and pricing.</p>
+          <p>Current work concerns source freshness and verification of the update/import workflow. Official sources take precedence for baseline-rule conflicts. The promotions workflow uses the agreed PropScore update stream with supporting official links; reference coverage is not an endorsement.</p>
+          <p>This is a standalone companion tool. Shared reference-data integration with Ledger remains planned, and the catalog does not claim automatic updates or complete, continuously verified coverage.</p>
         </article>
         <article class="content-card subdued">
           <h3>Moonlit Replay</h3>
@@ -75,12 +92,12 @@
         </article>
         <article class="content-card subdued">
           <h3>Moonlit Atlas</h3>
-          <p>Atlas is currently in specification reconciliation. Its role is internal project memory and lineage: preserving products, decisions, branches, rationale, and “What led here?” relationships without rewriting history to look cleaner than it was.</p>
-          <p>Implementation begins only after the reconciled vocabulary and architecture are accepted.</p>
+          <p>Atlas remains in specification reconciliation as the internal project-memory and lineage system. Implementation begins only after the reconciled vocabulary and architecture are accepted.</p>
+          <p>Working development maps and evaluation boards remain internal tools, not public products or downloads.</p>
         </article>
         <article class="content-card">
           <h3>Moonlit Hub</h3>
-          <p>The public site is live and now serves as the curated presentation and future download surface for approved Moonlit releases. Ongoing maintenance is limited to public-safe product state, changelog, roadmap, screenshots, and approved release links.</p>
+          <p>The public site is live. Maintenance keeps the catalog, current direction, roadmap, and approved distribution information aligned without publishing private source or internal project records.</p>
         </article>
       </div>
     </section>
@@ -89,8 +106,24 @@
       <div class="section-heading">
         <p class="eyebrow">What's New</p>
         <h2 id="new-title">Recent public-facing changes</h2>
+        <p>Dates mark public updates unless an entry explicitly identifies a product milestone. Earlier entries retain the terminology used at the time.</p>
       </div>
       <div class="timeline">
+        <article>
+          <time datetime="2026-09-06">September 6, 2026</time>
+          <h3>Catalog expanded and component states clarified</h3>
+          <p>Added Flow, Focus, and Prop Firm Stream Reference to the public catalog; clarified current Traces naming alongside historical Trace terminology. Ebb is experimental, Levels is preserved, and Echoes is a parked concept. These are catalog corrections, not new product launches or public releases.</p>
+        </article>
+        <article>
+          <time datetime="2026-09-06">September 6, 2026</time>
+          <h3>Indicator development workflow established</h3>
+          <p>Indicator sources and historical research have been organized into a recoverable development structure. Next is reconciling the implementations used in TradingView with their source records. Traces consolidation remains under controlled evaluation, not declared validated.</p>
+        </article>
+        <article>
+          <time datetime="2026-09-06">September 6, 2026</time>
+          <h3>Access and public downloads separated</h3>
+          <p>Product cards now distinguish development status, access, and approved downloads. Ledger remains an invite-only web beta; Atlas no longer shows release or download fields. No new public version or binary is announced.</p>
+        </article>
         <article>
           <time datetime="2026-09-05">September 5, 2026</time>
           <h3>Ledger entered invite-only multi-user beta</h3>
@@ -118,14 +151,17 @@
       <div class="section-heading">
         <p class="eyebrow">Roadmap</p>
         <h2 id="roadmap-title">Public-safe project direction</h2>
-        <p>Roadmap labels describe intent, not delivery promises.</p>
+        <p>Current work, future direction, and parked concepts are different. These labels describe intent, not delivery promises.</p>
       </div>
       <div class="roadmap-grid">
-        <article class="roadmap-card current"><span>Current</span><h3>Ledger beta hardening</h3><p>Stabilize the invite-only multi-user beta with migration checks, stale-state protection, onboarding improvements, tester fixes, and regression coverage.</p></article>
-        <article class="roadmap-card development"><span>In Development</span><h3>Indicator components</h3><p>Continue active work across Currents, Trace, Ebb, Levels, and related product-facing research while preserving clear component boundaries.</p></article>
-        <article class="roadmap-card planned"><span>Planned</span><h3>Geometry</h3><p>Geometry remains a future indicator direction and is not presented as shipped functionality.</p></article>
+        <article class="roadmap-card current"><span>Current</span><h3>Ledger beta hardening</h3><p>Verify account/session state, safe imports, onboarding, and the release path before wider access. Brokerage integration remains separate future work.</p></article>
+        <article class="roadmap-card development"><span>In Development</span><h3>Indicator reconciliation + evaluation</h3><p>Match exact current sources, evaluate Traces relationships and the static Focus panel, and keep experimental Ebb distinct from accepted behavior.</p></article>
+        <article class="roadmap-card development"><span>In Development</span><h3>Stream Reference validation</h3><p>Maintain source freshness, verify the data/feed workflow, and preserve the separation between baseline rules and promotions.</p></article>
+        <article class="roadmap-card planned"><span>Planned</span><h3>Geometry</h3><p>A future indicator direction, not shipped functionality or a scheduled release.</p></article>
+        <article class="roadmap-card concept"><span>Concept</span><h3>Constellation</h3><p>A possible umbrella/interface coordinating distinct indicator views, not one giant indicator or a separately released product.</p></article>
+        <article class="roadmap-card paused"><span>Concept / Parked</span><h3>Echoes</h3><p>A proposed view of historical executed participation across price and time. The concept is documented; implementation is not underway.</p></article>
         <article class="roadmap-card paused"><span>Paused / Preserved</span><h3>Moonlit Replay</h3><p>Historical replay, Blind Read, synthetic markets, and deliberate-practice workflows remain preserved but intentionally paused.</p></article>
-        <article class="roadmap-card concept"><span>Internal</span><h3>Moonlit Atlas</h3><p>Reconcile terminology, architecture, and lineage semantics before implementation begins.</p></article>
+        <article class="roadmap-card concept"><span>Internal</span><h3>Moonlit Atlas</h3><p>Reconcile terminology, architecture, and lineage before implementation. Internal working boards are not public product releases.</p></article>
       </div>
     </section>
 
@@ -133,10 +169,11 @@
       <div class="section-heading">
         <p class="eyebrow">Downloads</p>
         <h2 id="downloads-title">Approved public builds</h2>
-        <p>Only owner-approved working builds appear here. Development checkpoints, private repository history, and recovered archives are not public downloads.</p>
+        <p>Only owner-approved end-user builds belong here. Web-beta access, a working local prototype, or a preserved research file does not imply an available public download.</p>
       </div>
       <div class="download-list" id="download-list"></div>
-      <p class="download-note">Future binaries should be attached to GitHub Releases instead of committed into this site repository.</p>
+      <noscript><p class="catalog-note">Enable JavaScript to view the current curated download states. No download is offered in this view.</p></noscript>
+      <p class="download-note">Approved downloadable packages will use GitHub Releases. Private source, repository history, internal boards, and unapproved artifacts are not public downloads.</p>
     </section>
 
     <section class="section" id="screenshots" aria-labelledby="screenshots-title">

@@ -1,0 +1,41 @@
+/* Catalog layout additions; retain the original Moonlit visual identity. */
+:root { --faint: #a0aec3; }
+.card-top { flex-wrap: wrap; gap: .7rem 1rem; }
+.status-pill { max-width: 100%; white-space: normal; font-size: .78rem; }
+.status-pill.experimental { color: var(--warn); border-color: rgba(240,201,140,.3); }
+.product-card, .content-card, .hero-panel, .download-row > * { min-width: 0; }
+.product-family { grid-column: 1 / -1; }
+.product-meta { margin-bottom: 0; }
+.meta-row { grid-template-columns: 115px minmax(0,1fr); }
+.meta-row dt { color: var(--muted); }
+.meta-row dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.meta-row a { color: var(--accent-2); text-underline-offset: .2em; }
+.component-group { margin: 0 0 1.25rem; }
+.component-group-title { margin: 0 0 .65rem; color: var(--accent); font-size: .82rem; font-weight: 650; }
+.component-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem; }
+.component-card { padding: 1.1rem; border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,.015); }
+.component-card h4 { margin: 0; font-size: 1.1rem; }
+.component-card p { margin: .6rem 0 0; color: var(--muted); font-size: .9rem; }
+.component-card .component-status { margin-top: .3rem; color: var(--accent-2); font-size: .8rem; }
+.product-note, .catalog-note { color: var(--muted); font-size: .9rem; }
+.product-note { margin: 0 0 1.4rem; }
+.catalog-note { margin: 1.2rem 0 0; }
+.review-date { color: var(--muted); font-size: .85rem; }
+.focus-row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); }
+.roadmap-grid { grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+.download-row { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr) auto; }
+.download-unavailable { color: var(--muted); font-size: .82rem; }
+.download-row .button { white-space: normal; }
+@media (max-width: 720px) {
+  .site-header { flex-wrap: wrap; gap: 1rem; }
+  .site-nav { display: flex; width: 100%; justify-content: flex-start; gap: .2rem 1rem; }
+  .site-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .component-grid { grid-template-columns: 1fr; }
+  .download-row { grid-template-columns: minmax(0,1fr); }
+  .download-row .button { justify-self: start; }
+}
+@media (max-width: 400px) {
+  .meta-row { grid-template-columns: minmax(0,1fr); gap: .25rem; }
+  .roadmap-grid { grid-template-columns: minmax(0,1fr); }
+  .product-card { padding: 1.15rem; }
+}
