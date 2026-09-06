@@ -33,12 +33,12 @@ const products = [
     name: "Moonlit Indicators",
     status: "Active Development / Source Reconciliation",
     statusClass: "active",
-    purpose: "A family of market-relationship tools with distinct jobs. Current work identifies the exact implementations in use, evaluates research changes, and keeps experimental, validated, and publicly approved builds separate.",
+    purpose: "A family of market-relationship tools with distinct jobs. Currents has public 1-minute and 1-second baselines on TradingView. Newer development identifies the exact research implementations in use and evaluates changes separately from those publications.",
     componentGroups: [
       {
         title: "Current indicator workstreams",
         items: [
-          { name: "Currents", status: "Active development / source reconciliation", purpose: "Describes relationships around VWAP through an on-chart reference field." },
+          { name: "Currents", status: "Public baselines / active research", purpose: "Describes relationships around VWAP through an on-chart reference field. The public 1m and 1s baselines are published as Gypsy VWAP Map v0.30; newer Currents research remains separate." },
           { name: "Flow", status: "Development candidate / source reconciliation", purpose: "Presents VWAP-relative relationships in a separate pane. No public release or validation claim is made." },
           { name: "Traces", status: "Research / controlled evaluation", purpose: "Research into remembered chart geometry and the lifecycle of established relationships. Previously referred to as Trace; the naming update is not a separate product launch." },
           { name: "Ebb", status: "Experimental", purpose: "Explores a slower, standalone relationship field and descriptions of expansion, contraction, and settling. Current-use status remains unconfirmed." }
@@ -52,10 +52,30 @@ const products = [
         ]
       }
     ],
-    note: "Earlier VWAP Map work remains part of the family’s history. Exact source-to-chart reconciliation is still underway: an unconfirmed source match does not mean an indicator is unused. Constellation, Geometry, and Echoes are future or parked directions, not released components.",
-    access: "Development and research use; public distribution not approved",
+    note: "The public Currents baselines retain their original Gypsy VWAP Map v0.30 publication names. They are available now, independently of newer research and its source-to-chart reconciliation. Constellation, Geometry, and Echoes remain future or parked directions, not released components.",
+    access: "Public Currents 1m / 1s baselines on TradingView; newer research remains separate",
+    publications: [
+      {
+        name: "Currents baseline — 1 minute",
+        publishedTitle: "Gypsy VWAP Map v0.30 1M NonPremium TV version",
+        version: "v0.30",
+        platform: "TradingView",
+        requirements: "1-minute calculation stream; no seconds-data access required. Published as the NonPremium version.",
+        url: "https://www.tradingview.com/script/8YodMcwh-Gypsy-VWAP-Map-v0-30-1M-NonPremium-TV-version/",
+        approved: true
+      },
+      {
+        name: "Currents baseline — 1 second",
+        publishedTitle: "Gypsy VWAP Map v0.30 Premium TradingView Req.",
+        version: "v0.30",
+        platform: "TradingView",
+        requirements: "1-second calculation stream; TradingView seconds-data access required. Published as the Premium-required version.",
+        url: "https://www.tradingview.com/script/Wl9x7fWz-Gypsy-VWAP-Map-v0-30-Premium-TradingView-Req/",
+        approved: true
+      }
+    ],
     publicDownloads: true,
-    unavailableText: "No approved public indicator download yet.",
+    unavailableText: "No standalone package; use the public TradingView baselines above.",
     version: null,
     downloadUrl: null,
     downloadApproved: false
@@ -109,6 +129,28 @@ function approvedDownload(product) {
   }
 }
 
+// Platform publications are links to approved listings, not binary-download approval.
+function approvedPublication(publication) {
+  if (!publication || publication.approved !== true || publication.platform !== "TradingView" ||
+      typeof publication.version !== "string" || !publication.version.trim() ||
+      typeof publication.url !== "string") return null;
+  try {
+    const url = new URL(publication.url);
+    const scriptPath = /^\/script\/[A-Za-z0-9]{8}(?:-[A-Za-z0-9-]+)?\/$/;
+    if (url.protocol !== "https:" || url.host !== "www.tradingview.com" ||
+        url.username || url.password || url.search || url.hash ||
+        !scriptPath.test(url.pathname)) return null;
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
+function publicPublications(product) {
+  return Array.isArray(product.publications)
+    ? product.publications.filter(publication => approvedPublication(publication)) : [];
+}
+
 function componentGroups(groups) {
   return groups.map(group => `
     <div class="component-group">
@@ -126,6 +168,11 @@ function componentGroups(groups) {
 
 function productCard(product) {
   const download = approvedDownload(product);
+  const publications = publicPublications(product);
+  const platformAccess = publications.length ? `
+    <div class="meta-row"><dt>Public baselines</dt><dd class="publication-links">${publications.map(publication =>
+      `<a class="button secondary" href="${escapeHtml(approvedPublication(publication))}">${escapeHtml(publication.name)} · ${escapeHtml(publication.version)} — TradingView</a>`
+    ).join("")}</dd></div>` : "";
   const publicDownload = product.publicDownloads ? `
     <div class="meta-row"><dt>Public download</dt><dd>${download
       ? `<a href="${escapeHtml(download)}">Download ${escapeHtml(product.name)} — ${escapeHtml(product.version)}</a>`
@@ -142,8 +189,20 @@ function productCard(product) {
       ${product.note ? `<p class="product-note">${escapeHtml(product.note)}</p>` : ""}
       <dl class="product-meta">
         <div class="meta-row"><dt>Access</dt><dd>${escapeHtml(product.access)}</dd></div>
+        ${platformAccess}
         ${publicDownload}
       </dl>
+    </article>`;
+}
+
+function publicationRow(publication) {
+  const url = approvedPublication(publication);
+  if (!url) return "";
+  return `
+    <article class="download-row">
+      <div><h3>${escapeHtml(publication.name)}</h3><p>Published as: ${escapeHtml(publication.publishedTitle)}</p></div>
+      <div><div class="download-label">Public baseline · ${escapeHtml(publication.version)}</div><div class="download-value">${escapeHtml(publication.requirements)}</div></div>
+      <a class="button primary" href="${escapeHtml(url)}" aria-label="Open ${escapeHtml(publication.name)} on TradingView">Open on TradingView</a>
     </article>`;
 }
 
@@ -152,14 +211,16 @@ function downloadRow(product) {
   return `
     <article class="download-row">
       <div><h3>${escapeHtml(product.name)}</h3><p>${escapeHtml(product.access)}</p></div>
-      <div><div class="download-label">Public build</div><div class="download-value">${download ? escapeHtml(product.version) : escapeHtml(product.unavailableText)}</div></div>
+      <div><div class="download-label">Downloadable package</div><div class="download-value">${download ? escapeHtml(product.version) : escapeHtml(product.unavailableText)}</div></div>
       ${download
         ? `<a class="button primary" href="${escapeHtml(download)}">Download ${escapeHtml(product.name)}</a>`
-        : `<span class="download-unavailable">No public download</span>`}
+        : `<span class="download-unavailable">No package available</span>`}
     </article>`;
 }
 
 const productGrid = document.getElementById("product-grid");
 const downloadList = document.getElementById("download-list");
+const publicationList = document.getElementById("publication-list");
 if (productGrid) productGrid.innerHTML = products.map(productCard).join("");
 if (downloadList) downloadList.innerHTML = products.filter(product => product.publicDownloads).map(downloadRow).join("");
+if (publicationList) publicationList.innerHTML = products.flatMap(publicPublications).map(publicationRow).join("");

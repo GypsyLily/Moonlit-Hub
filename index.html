@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Moonlit Hub — public project status, roadmap, and approved downloads for the Moonlit software ecosystem.">
+  <meta name="description" content="Moonlit Hub — public project status, roadmap, TradingView baselines, and approved downloads for the Moonlit software ecosystem.">
   <meta name="theme-color" content="#0b1020">
   <title>Moonlit Hub</title>
   <link rel="stylesheet" href="./styles.css">
@@ -21,7 +21,7 @@
       <a href="#direction">Direction</a>
       <a href="#new">What's New</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="#downloads">Downloads</a>
+      <a href="#downloads">Get Moonlit</a>
     </nav>
   </header>
   <main id="main">
@@ -32,15 +32,15 @@
         <p class="hero-lede">Moonlit is a family of independent tools for trading operations, market structure research, and deliberate practice. This Hub is the public view: current products, approved builds, recent changes, and project direction.</p>
         <div class="hero-actions">
           <a class="button primary" href="#products">Explore products</a>
-          <a class="button secondary" href="#downloads">View downloads</a>
+          <a class="button secondary" href="#downloads">Downloads &amp; TradingView</a>
         </div>
       </div>
       <div class="hero-panel" aria-label="Current project focus">
         <p class="panel-kicker">Current focus</p>
         <h2>Ledger + Indicators</h2>
-        <p>Beta hardening, indicator source reconciliation, and controlled research evaluation. The standalone stream-reference tool is also undergoing data and feed validation.</p>
+        <p>Public Currents baselines are available on TradingView. Development continues on Ledger beta hardening, indicator source reconciliation, and controlled research evaluation; the standalone stream-reference tool is undergoing data and feed validation.</p>
         <div class="focus-row"><span>Ledger</span><strong>Invite-only web beta</strong></div>
-        <div class="focus-row"><span>Indicators</span><strong>Development / reconciliation</strong></div>
+        <div class="focus-row"><span>Indicators</span><strong>Public baselines + active research</strong></div>
         <div class="focus-row"><span>Stream Reference</span><strong>Prototype / validation</strong></div>
         <div class="focus-row muted"><span>Replay</span><strong>Paused / Preserved</strong></div>
       </div>
@@ -54,7 +54,7 @@
         <p class="review-date">Catalog reviewed <time datetime="2026-09-06">September 6, 2026</time>.</p>
       </div>
       <div class="product-grid" id="product-grid"></div>
-      <noscript><p class="catalog-note">Product cards require JavaScript. Current direction and the roadmap remain available below; no download is offered in this view.</p></noscript>
+      <noscript><p class="catalog-note">Product cards require JavaScript. Current direction, the roadmap, and the public TradingView baseline links remain available below.</p></noscript>
       <p class="catalog-note">Component descriptions include ongoing research, not a claim that every feature is finished or validated. Future and parked concepts are listed separately in the roadmap.</p>
     </section>
 
@@ -70,9 +70,10 @@
           <p>Core scope remains account management, risk / guardrail tools, rules, journaling, live notes, sessions, reviews, and account overview. Brokerage telemetry and execution capture are separate future integration work, not features claimed for this beta.</p>
         </article>
         <article class="content-card">
-          <h3>Moonlit Indicators — source reconciliation</h3>
+          <h3>Moonlit Indicators — public baselines and source reconciliation</h3>
+          <p>Currents has two existing public baselines on TradingView: the 1-minute and 1-second Gypsy VWAP Map v0.30 publications. Their original publication names and versions are retained; linking them does not promote newer research builds.</p>
           <p>Indicator sources, historical research, and the development workflow have been organized. Current reconciliation focuses on Currents, Flow, Traces, and experimental Ebb, while Focus is evaluated as a static session-reminder panel and Levels remains a supporting component.</p>
-          <p>The next step is matching the exact TradingView implementations in use to their corresponding source records. A source used on a chart, a preserved file, a validated behavior, and a publicly approved build are different states.</p>
+          <p>The next step for newer research is matching the exact TradingView implementations in use to their corresponding source records. That reconciliation does not remove the availability of the already-published baselines.</p>
           <p>Constellation remains an umbrella/interface concept, Geometry a future direction, and Echoes a parked concept. None is presented as a released component.</p>
         </article>
         <article class="content-card">
@@ -109,6 +110,11 @@
         <p>Dates mark public updates unless an entry explicitly identifies a product milestone. Earlier entries retain the terminology used at the time.</p>
       </div>
       <div class="timeline">
+        <article>
+          <time datetime="2026-09-06">September 6, 2026</time>
+          <h3>Existing Currents baselines linked on TradingView</h3>
+          <p>Corrected an omission: the public 1-minute and 1-second baselines are already available as Gypsy VWAP Map v0.30. Hub now links both publications and distinguishes platform access from downloadable packages. This is not a new indicator release or promotion of newer research.</p>
+        </article>
         <article>
           <time datetime="2026-09-06">September 6, 2026</time>
           <h3>Catalog expanded and component states clarified</h3>
@@ -167,13 +173,21 @@
 
     <section class="section" id="downloads" aria-labelledby="downloads-title">
       <div class="section-heading">
-        <p class="eyebrow">Downloads</p>
-        <h2 id="downloads-title">Approved public builds</h2>
-        <p>Only owner-approved end-user builds belong here. Web-beta access, a working local prototype, or a preserved research file does not imply an available public download.</p>
+        <p class="eyebrow">Get Moonlit</p>
+        <h2 id="downloads-title">Downloads &amp; platform access</h2>
+        <p>Public Currents baselines are available on TradingView. Standalone downloadable packages, invite-only web access, and newer research builds are listed separately.</p>
       </div>
+      <h3>Available on TradingView</h3>
+      <p class="product-note">Both public baselines retain their original Gypsy VWAP Map v0.30 names. The 1m and 1s labels describe their calculation streams. Open the listing to use the indicator on TradingView; these are not Windows installers.</p>
+      <div class="download-list" id="publication-list"></div>
+      <noscript>
+        <p><a href="https://www.tradingview.com/script/8YodMcwh-Gypsy-VWAP-Map-v0-30-1M-NonPremium-TV-version/">Open Currents 1-minute baseline — Gypsy VWAP Map v0.30 1M NonPremium TV version</a>. No seconds-data access required.</p>
+        <p><a href="https://www.tradingview.com/script/Wl9x7fWz-Gypsy-VWAP-Map-v0-30-Premium-TradingView-Req/">Open Currents 1-second baseline — Gypsy VWAP Map v0.30 Premium TradingView Req.</a>. Seconds-data access required.</p>
+      </noscript>
+      <h3 class="package-heading">Downloadable packages</h3>
       <div class="download-list" id="download-list"></div>
-      <noscript><p class="catalog-note">Enable JavaScript to view the current curated download states. No download is offered in this view.</p></noscript>
-      <p class="download-note">Approved downloadable packages will use GitHub Releases. Private source, repository history, internal boards, and unapproved artifacts are not public downloads.</p>
+      <noscript><p class="catalog-note">Standalone-package states require JavaScript. No package download is offered in this view.</p></noscript>
+      <p class="download-note">Approved downloadable packages will use GitHub Releases. Platform listings link to existing public publications without copying their source into Hub. Private source, repository history, internal boards, and unapproved artifacts are not public downloads.</p>
     </section>
 
     <section class="section" id="screenshots" aria-labelledby="screenshots-title">

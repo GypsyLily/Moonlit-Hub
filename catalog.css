@@ -26,6 +26,9 @@
 .download-row { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr) auto; }
 .download-unavailable { color: var(--muted); font-size: .82rem; }
 .download-row .button { white-space: normal; }
+.publication-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+.publication-links .button { max-width: 100%; }
+.package-heading { margin-top: 2rem; }
 @media (max-width: 720px) {
   .site-header { flex-wrap: wrap; gap: 1rem; }
   .site-nav { display: flex; width: 100%; justify-content: flex-start; gap: .2rem 1rem; }
