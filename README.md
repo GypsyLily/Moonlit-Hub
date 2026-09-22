@@ -1,6 +1,6 @@
 # Moonlit Hub
 
-Curated public presentation, project status, platform-access, and approved-download site for Moonlit. The site is static HTML/CSS/JavaScript: no backend, build step, account system, or external runtime dependencies.
+Curated public presentation, project status, platform-access, and approved-download site for Moonlit. The site is static HTML/CSS/JavaScript: no backend, build step, account system, or external runtime dependencies. edit
 
 Private application source, internal Atlas documents, recovery archives, secrets, account data, and unapproved binaries do not belong here. Hub is not an automatic mirror of another repository.
 
